@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Titre</title>
+        <meta name="author" content="Nom">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+    
+    </body>
+</html>
+
+---------------------------------------
+
+<meta name="description" content="Page traitant 
+du squelette d'une page HTML afin d'expliquer la 
+structure d'une page web tout en tenant compte des 
+bonnes pratiques et des standards actuels, incluant 
+le minimum nécessaire dans la section <head>, ainsi 
+que ce qu'on devrait retrouver dans la section 
+<body>.">
+
+<link rel="icon" type="image/x-icon" 
+href="mon_favicon.ico">
+
+<meta property="og:image" content="https:
+//cours.dinf.cll.qc.ca/interface/mon_image.png">
+
+<meta property="og:title" content="Cours Dinf - 
+Interfaces Web">
+
+<meta property="og:description" content="Contenu 
+de cours pour le cours intitulé Interfaces Web 
+dispensé par le département d'informatique du Cégep 
+de Lévis-Lauzon.">
+
+<script src="mon_fichier_js.js"></script>
+
+---------------------------------------
+
+Commentaire :
+
+Html : <!-- Ceci est un commentaire -->
+
+Css : /*...*/
