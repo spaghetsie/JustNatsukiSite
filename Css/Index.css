@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: Natsuki_Handwriting;
-  src: url(n1.tff);
+  src: url("../Font/n1.ttf");
 }
 
 /* Body */
@@ -97,8 +97,8 @@ nav {
     height: 8%;
     width: 35%;
     text-shadow:
-     -1px -1px 0 pink,  
-      1px -1px 0 black,
+      -1px -1px 0 pink,
+       1px -1px 0 black,
       -1px 1px 0 hotpink,
        1px 1px 0 hotpink;
 }
@@ -153,10 +153,10 @@ nav {
     font-size: 1em;
     font-weight: bold;
     text-shadow:
-     -1px -1px 0 pink,  
-      1px -1px 0 black,
-      -1px 1px 0 hotpink,
-       1px 1px 0 hotpink;
+       -1px -1px 0 pink,
+        1px -1px 0 black,
+       -1px 1px 0 hotpink,
+        1px 1px 0 hotpink;
     margin: 0; /* Important for vertical align on mobile phones */
     color: deeppink;
     background-color: transparent;
@@ -181,18 +181,19 @@ nav {
 
 
 
+
 /* Links inside the dropdown */
 .dropdown-content a {
-  float: none;
-  color: pink;
-  padding: 1.6% 7% 1.85% 7%;
-  display: block;
-  text-align: middle;
+    float: none;
+    color: pink;
+    padding: 1.6% 7% 1.85% 7%;
+    display: block;
+    text-align: middle;
     text-decoration-line: none;
 }
 
 /* Show the dropdown menu on hover */
-#Liste:hover .dropdown-content {
+.DropMenu:hover .dropdown-content {
     display: block;
     transition: background-color 0.4s;
 }
@@ -217,7 +218,7 @@ header {
     margin-top: 5%;
     color: deeppink;
     text-shadow:
-     -1px -1px 0 pink,  
+     -1px -1px 0 pink,
       1px -1px 0 black,
       -1px 1px 0 hotpink,
        1px 1px 0 hotpink;
@@ -284,15 +285,26 @@ h2 {
     width: 70%;
     text-align: center;
     border-collapse: separate;
-    border-spacing: 2em 6em;
+    border-spacing: 1em 2em;
 }
 
+/* Avatar related */
 .Avatars {
     margin-top: 3%;
     margin-left: 15%;
     margin-bottom: 3%;
-    width: 80%;
-    height: 200%;
+    /*width: 40%;
+    height: 40%;*/
+}
+
+.side-left {
+    text-align: left;
+    width: 30%;
+}
+
+.side-right {
+    text-align: right;
+    width: 30%;
 }
 
 #DescDaisy {
@@ -345,6 +357,10 @@ h2 {
     font-size: 1.1em;
 }
 
+#Github a img {
+    width: 25%;
+    height: 25%;
+}
 #Tweet {
     background: url("../Images/Cute_Frame.png");
     background-size: cover;
