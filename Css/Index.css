@@ -14,6 +14,10 @@ body {
     width : 100%;
     height : 100%;
     font-family: 'Natsuki_Handwriting',sans-serif;
+    background-image: url(../Images/JNBG.gif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* The Slider for the animation */
@@ -236,21 +240,27 @@ h2 {
     margin-top: 4%;
     width: 100%;
     text-align: center;
+    font-weight: bold;
     font-size: 3em;
+    text-shadow:
+     -1px -1px 0 white,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+       1px 1px 0 black;
 }
 
 #FeaturesText {
     display: inline-block;
     margin: 4% 0% 0% 0%;
     width: 100%;
-    font-size: 0.6em;
+    font-size: 0.7em;
     font-weight: bold;
     font-style: italic;
 }
 
 .Features {
     display: inline;
-    margin: 0% 8% 0% 8%;
+    margin: 0% 7.5% 0% 7.5%;
     /*background-color: rgba(219,112,147,0.5)*/
 }
 
@@ -277,6 +287,11 @@ h2 {
     font-weight: bold;
     text-align: center;
     font-size: 3em;
+    text-shadow:
+     -1px -1px 0 white,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+       1px 1px 0 black;
 }
 
 #Team {
@@ -313,9 +328,10 @@ h2 {
     font-size: 2em;
     font-weight: bold;
     border: 1px 1px 1px 1px;
+    padding: 2% 1% 2% 1%;
     border-style: double;
     border-color: black;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.5);
 }
 
 #DescJMO {
@@ -324,9 +340,10 @@ h2 {
     font-size: 2em;
     font-weight: bold;
     border: 1px 1px 1px 1px;
+    padding: 1% 1% 1% 1%;
     border-style: double;
     border-color: black;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.5);
 }
 
 #DescJNN {
@@ -335,9 +352,10 @@ h2 {
     font-size: 2em;
     font-weight: bold;
     border: 1px 1px 1px 1px;
+    padding: 2% 1% 2% 1%;
     border-style: double;
     border-color: black;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.5);
 }
 
 #DescJp {
@@ -346,15 +364,21 @@ h2 {
     font-size: 2em;
     font-weight: bold;
     border: 1px 1px 1px 1px;
+    padding: 2% 1% 2% 1%;
     border-style: double;
     border-color: black;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.5);
 }
 
 #Github {
     width: 100%;
     text-align: center;
     font-size: 1.1em;
+    text-shadow:
+     -1px -1px 0 white,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+       1px 1px 0 black;
 }
 
 #Github a img {
@@ -368,7 +392,7 @@ h2 {
     margin-top: 5%;
     margin-left: 15%;
     margin-right:15%;
-    padding-bottom: 9.25%;
+    padding-bottom: 10.5%;
 }
 
 h5 {
@@ -384,7 +408,7 @@ h4 {
     font-size: 1.5em;
 }
 
-p {
+#Tweet p {
     width: 70%;
     padding-left: 15%;
     padding-bottom: 5%;
@@ -407,4 +431,17 @@ a:hover {
 
 a:checked {
     color: deeppink;
+}
+
+footer {
+    width: 95%;
+    margin-top: 10%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow:
+     -1px -1px 0 white,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+       1px 1px 0 black;
 }
