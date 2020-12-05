@@ -20,6 +20,11 @@ body {
     background-attachment: fixed;
 }
 
+#background {
+    margin: 1em;
+    background: rgba(0, 0, 0, 0.3);
+}
+
 /* The Slider for the animation */
 #load {
     animation: slide 2s;
