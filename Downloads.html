@@ -19,9 +19,9 @@
                 <nav>
                     <ul id="Navigation_Menu">
                         <li class="Navigation"><a href="Index.html">Home</a></li>
-                        <li class="Navigation"><a href="https://www.reddit.com/r/DDLCMods/comments/jmiuaq/just_natsuki_43_halloween_the_third/">Download</a></li>
+                        <li class="Navigation"><a href="Downloads.html">Download</a></li>
                         <li class="Navigation DropMenu">
-                            <a href=Downloads.html>More</a>
+                            <a>More</a>
 
                             <div class="dropdown-content">
                                 <a href="more.html/#">Old Downloads</a>
@@ -35,13 +35,25 @@
 
                 <!-- Title -->
                 <header>
-                    <h1>Downloads</h1>
+                    <h1>Download</h1>
                 </header>
 
                 </div>
-                <div class="buttons">
-                    <button class="button" onclick="location.href='#LatestDownloadWin'">Latest - x.x.x (windows)</button>
-                    <button class="button" onclick="location.href='#LatestDownloadMac'">Latest - x.x.x (mac)</button>
+                
+                <div>     
+                    <div class="download-dropmenu">
+                        <button onclick="showDropmenu()" class="download-btn">Latest - x.x.x</button>
+                        <div id="downloadDropdown" class="download-dropmenu-content">
+                            <a href="#somethin" style="margin-right: auto; margin-left: 10%;"><img src="Images/GH.png"></a>
+                            <a href="#somethin" style="margin-right: auto;"><img src="Images/GDrive.png"></a>
+                            <a href="#somethin" style="margin-left: auto; margin-right: 10%;"><img src="Images/MediaFire.png"></a>
+                        </div>
+                    </div>
+                    <script>
+                    function showDropmenu() {
+                    document.getElementById("downloadDropdown").classList.toggle("show");
+                    }
+                    </script>
                 </div>
 
                 
@@ -53,10 +65,7 @@
 
                 </footer>
 
-                </div>
-
             </div>
-
         </div>
     </body>
 </html>

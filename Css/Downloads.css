@@ -155,7 +155,7 @@ nav {
     overflow: hidden;
 }
 
-/* Dropdown button */
+/* Dropdown download-btn */
 #Liste .dropbtn {
     border: none;
     outline: none;
@@ -235,6 +235,7 @@ header {
 
 h1 {
     font-size: 5em;
+    margin-top: -40px;
 }
 
 h2 {
@@ -330,28 +331,62 @@ footer {
        1px 1px 0 black;
 }
 
-.buttons {
+.download-dropmenu {
+    margin-top: -40px;
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
+    position: relative;
 }
 
-.button {
-    display: inline-block;
+.download-btn {
     border: 3px solid rgb(255, 225, 241);
     outline: 6px solid rgb(255, 189, 225);
     color: black;
     background-color: white;
     height: 70%;
-    margin-right: 5%;
+    margin-right: auto;
+    margin-left: auto;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     font-size: 32px;
     cursor: pointer;
+    width: 410px
 }
  
-.button:hover {
+.download-btn:hover {
     border-color: rgb(255, 189, 225);
     background-color: rgb(255, 230, 244);
+}
+
+.download-dropmenu-content {
+    display: none;
+    position: relative;
+    text-align: center;
+    min-height: 40px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: -84px;
+    padding: 0px;
+    z-index: 1;
+}
+
+.download-dropmenu-content a {
+    margin-top: 10px;
+    height: 30px;
+}
+
+.download-dropmenu-content img {
+    height: 100%;
+    background-color: rgba(255, 182, 193, 0.7);
+    padding: 10px;
+}
+
+.download-dropmenu-content img:hover {
+    background-color: pink;
+}
+
+.show {
+    display: block;
 }
