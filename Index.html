@@ -6,6 +6,7 @@
         <meta name="author" content="Just Natsuki Team">
         <link rel="stylesheet" href="Css/Index.css">
         <link rel="icon" type="image/x-icon" href="Images/JNICon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -23,12 +24,12 @@
                         <li class="Navigation"><a href="Index.html">Home</a></li>
                         <li class="Navigation"><a href="Downloads.html">Download</a></li>
                         <li class="Navigation DropMenu">
-                            <a href=#oldDownloads>More</a>
+                            <a href="more.html">More</a>
 
                             <div class="dropdown-content">
-                                <a href="more.html/#">Old Downloads</a>
-                                <a href="more.html/#">Alpha Downloads</a>
-                                <a href="more.html/#">Contact</a>
+                                <a href="more.html#FullReleases">Old Downloads</a>
+                                <a href="more.html#Alpha">Alpha Downloads</a>
+                                <a href="more.html#Contact">Contact</a>
                             </div>
                         </li>
                     </ul>
@@ -89,55 +90,140 @@
                     </table>
                 </div>
 
-                <div id="Github">
-                    <h2>Check us out on</h2>
-                    <a href="https://github.com/Just-Natsuki-Team/NatsukiModDev">
-                        <img src="Images/GH.png" alt="GitHub"/>
-                    </a>
+                
 
                 </div>
-
-                <div id="Tweet">
-
-                    <h5>November 2</h5>
-
-                    <h4>Just Natsuki 4.3 (Halloween the Third)</h4>
-
-                    <p>
-
-                        Yes, I know this is late. I had less time to make it and had other responsibilities too. I'm a busy gal what can I say? I still got it out, and have some exciting news!
-                        <br>
-                        <br>
-                        <br>
-                        ADDED:
-                        <br>
-                        Added Halloween Event (This will run until November 4th rather than just the 31st. Tho it only really does anything at night.)
-                        Added custom pronoun options for non-binary players or neopronoun users. (These can be changed anytime and will provide a sentence with the pronoun so you can see if it works properly.)
-                        <br>
-                        Added proper support for other types of third person pronouns. (Mainly so the game can call the player "her" "him" or "their" in cases where it's needed.)
-                        <br>
-                        Added two Halloween stories starring the player.
-                        <br>
-                        <br>
-                        <br>
-                        FIXED
-                        <br>
-                        Fixed issue with the same dialogue appearing twice in Talk Menu 6 and 7.
-                        <br>
-                        <br>
-                        <br>
-                        In other news, a playable demo for Just Natsuki's art overhaul is ready! It just needs testing and bugfixing. This demo simply replaces all the old assets, so some of the expression are lame, and the outfits don't all look perfectly edited. Also, some features are disabled are disabled as they don't work yet in the demo. The full version will have a whole new system for expression that allow for WAY more expression on Natsuki's part. I just kinda need to learn how to even do that. This demo isn't part of this update. It will likely be in the next update as a side version. But I will likely not be putting it in the main game yet.
-                        <br>
-                        Everyone, give a big thanks to JMO for this.
-                        Welp, that's all for now! Have fun!
-                        <br>
-                        <br>
-                        -Daisy!
-
-                    </p>
-
                 </div>
+                <div style="margin-left: 4%; margin-right: 4%;">
+                    <div id="Feed">
+                        <h2 style="margin-bottom: 0px;">What's happening!</h2>
+                        <div class="twitter-block" id="Tweet">
+                            <a class="twitter-timeline"
+                            href="https://twitter.com/spaghetsie"
+                            data-chrome="nofooter"
+                            data-height="250"
+                            data-width="600"
+                            data-theme="light"
+                            >Tweets by spaghetsie</a>
 
+
+                            <script async src="https://platform.twitter.com/widgets.js"></script>
+                            <script>
+                                $('.twitter-block').delegate('#twitter-widget-0','DOMSubtreeModified propertychange', function() {
+                                    //function call to override the base twitter styles
+                                    customizeTweetMedia();
+                                });
+
+                                var customizeTweetMedia = function() {
+                                    //border+outline
+                                    $('.twitter-block').find('.twitter-timeline').css({"border": "4px solid rgb(255, 225, 241)", "outline" : "8px solid rgb(255, 189, 225)"});
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Widget').css({"border-radius": "0px"});
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-header').css({"background-color" : "rgb(255, 230, 244)"});
+
+                                    //highligh tweet
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet').hover(function() {
+                                        $(this).css("background-color","rgb(255, 230, 244)")
+                                    }, function() {
+                                        $(this).css("background-color","white");
+                                    });
+
+                                    //tweet border
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-TweetList-tweet').css("border-top", "1px solid rgba(255, 20, 147, .14)")
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Body').css({"border-top": "1px solid rgba(255, 20, 147, .14)", "border-bottom": "1px solid rgba(255, 20, 147, .14)"})
+                                    
+                                    //info icon
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.Icon--informationCircleWhite').css("background-image", "url('Images/twitter-info-icon.png')")
+                                    
+                                    //brand icon
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-brand .Icon--twitter').css({"background-image" : "url('Images/tweet-idle.png')"})
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet').hover(function(){
+                                        $(this).find('.timeline-Tweet-brand .Icon--twitter').css({"background-image" : "url('Images/tweet-hover.png')"})
+                                    }, function(){
+                                        $(this).find('.timeline-Tweet-brand .Icon--twitter').css({"background-image" : "url('Images/tweet-idle.png')"})
+                                    });
+
+                                    //heart icon
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.TweetAction--heart .Icon').css({"background-image": "url('Images/twitter-like-idle.png')", "backgound-size": "25px 25px"})
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.TweetAction--heart').hover(function(){
+                                        $(this).find('.Icon').attr("style", "background-image: url('Images/twitter-like-hover.png') !important")
+                                    }, function(){
+                                        $(this).find('.Icon').css({"background-image": "url('Images/twitter-like-idle.png')"})
+                                    });
+
+                                    //share icon
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.TweetAction--share .Icon').css({"background-image": "url('Images/twitter-share-idle.png')", "backgound-size": "25px 25px"})    
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.TweetAction--share').hover(function(){
+                                        $(this).find('.Icon').attr("style", "background-image: url('Images/twitter-share-hover.png') !important")
+                                    }, function(){
+                                        $(this).find('.Icon').attr("style", (selected) ? "background-image: url('Images/twitter-share-hover.png') !important" : "background-image: url('Images/twitter-share-idle.png') !important");
+                                    });
+                                    var selected = false;
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.TweetAction--share').click(function(){
+                                        selected = true;
+                                        $('.twitter-block').find('.twitter-timeline').contents().find(".timeline-ShareMenu-container").show()
+                                    });
+                                    $(document).click(function(event) { 
+                                        if(!$(event.target).closest('.TweetAction--share').length){
+                                            selected = false
+                                            $('.twitter-block').find('.twitter-timeline').contents().find('.TweetAction--share .Icon').attr("style", "background-image: url('Images/twitter-share-idle.png') !important")
+                                        }        
+                                    });
+                                    //share dropdown
+                                    $('.twitter-block').find('.twitter-timeline').contents().find(".timeline-ShareMenu-option").hover(function(){
+                                        $(this).css({"background-color": "hotpink"})
+                                    }, function(){
+                                        $(this).css({"background-color": "rgb(255, 240, 248)"})
+                                    });
+                                    $('.twitter-block').find('.twitter-timeline').contents().find(".timeline-ShareMenu-caret").remove()
+                                    $('.twitter-block').find('.twitter-timeline').contents().find(".timeline-ShareMenu-title").css({"color": "hotpink"})
+                                    $('.twitter-block').find('.twitter-timeline').contents().find(".timeline-ShareMenu-container").css({"background-color": "rgb(255, 240, 248)"})
+                                    $('.twitter-block').find('.twitter-timeline').hover(function(){
+                                        $('.twitter-block').find('.twitter-timeline').contents().find(".timeline-ShareMenu-container").hide()
+                                        $('.twitter-block').find('.twitter-timeline').contents().find('.TweetAction--share .Icon').attr("style", "background-image: url('Images/twitter-share-idle.png') !important")
+                                    });
+                                    
+                                    //hyperlink color
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Widget a').css({"color" : "hotpink"})
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Widget a').hover(function(){
+                                        $(this).css({"color" : "deeppink"})
+                                    }, function(){
+                                        $(this).css({"color" : "hotpink"})
+                                    });
+
+                                    //Load more
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-LoadMore-endOfTimelineMessage').css("color")
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-ShowMoreButton').css({"color" : "hotpink", "background-color": "white", "border": "1px solid hotpink"})
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-ShowMoreButton').hover(function(){
+                                        $(this).css({"color" : "white", "background-color": "hotpink"})
+                                    }, function(){
+                                        $(this).css({"color" : "hotpink", "background-color": "white"})
+                                    });
+                                    
+                                    //empty timeline
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.Button').css({"color" : "hotpink", "background-color": "white", "border": "1px solid hotpink"})
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.Button').hover(function(){
+                                        $(this).css({"background-color": "hotpink"})
+                                    }, function(){
+                                        $(this).css({"background-color": "white"})
+                                    });
+                                    
+
+                                    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-TweetList').bind('DOMSubtreeModified propertychange', function() {
+                                        customizeTweetMedia(this);
+                                    });
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div id="Github">
+                        <h2 style="margin-bottom: 22px;">Check us out on</h2>
+                        <a href="https://github.com/Just-Natsuki-Team/NatsukiModDev">
+                            <img src="Images/GH.png" alt="GitHub" width="550px">
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
                 <!-- Credits -->
                 <footer>
 

@@ -374,30 +374,42 @@ h2 {
     border-color: black;
     background-color: rgba(255,255,255,0.5);
 }
-
-#Github {
-    width: 100%;
+#Feed {
+    font-size: 1.1em;
+    color: deeppink;
+    text-shadow:
+     -0.8px -0.8px 0 pink,
+     0.8px -0.8px 0 pink,
+      -0.8px 0.8px 0 pink,
+      0.8px 0.8px 0 pink;
     text-align: center;
+    width: 570px;
+    display: inline-block;
+}
+#Github {
     font-size: 1.1em;
     text-shadow:
      -1px -1px 0 white,
       1px -1px 0 black,
       -1px 1px 0 black,
        1px 1px 0 black;
+    float: right;
+    text-align: center;
+    width: 570px;
 }
 
-#Github a img {
-    width: 25%;
-    height: 25%;
+#Github a img{
+    padding: 10px;
+    margin-top: 45px;
 }
+
+#Github a{
+    padding: 0px;
+    height: 270px;
+}
+
 #Tweet {
-    background: url("../Images/Cute_Frame.png");
-    background-size: cover;
-    height: 70%;
     margin-top: 5%;
-    margin-left: 15%;
-    margin-right:15%;
-    padding-bottom: 10.5%;
 }
 
 h5 {
@@ -411,14 +423,6 @@ h4 {
     padding-left: 15%;
     padding-bottom: 3%;
     font-size: 1.5em;
-}
-
-#Tweet p {
-    width: 70%;
-    padding-left: 15%;
-    padding-bottom: 5%;
-    font-size: 1em;
-    font-weight: bold;
 }
 
 a:link {
@@ -439,6 +443,7 @@ a:checked {
 }
 
 footer {
+    opacity: 0.75;
     width: 95%;
     margin-top: 10%;
     text-align: right;
