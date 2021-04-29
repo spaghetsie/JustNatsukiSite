@@ -1,0 +1,408 @@
+/* All to zero ! */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: Natsuki_Handwriting;
+  src: url("../Font/n1.ttf");
+}
+
+html {scroll-behavior: smooth;}
+
+/* Body */
+body {
+    width : 100%;
+    height : 100%;
+    font-family: 'Natsuki_Handwriting',sans-serif;
+    background-image: url(../Images/JNBG.gif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#background {
+    margin: 1em;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* The Slider for the animation */
+#load {
+    animation: slide 2s;
+}
+
+/* The background and all that */
+@keyframes slide {
+    0% {
+        background: url("../Images/Natsuki1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        width: 100%;
+        height :100%;
+    }
+    20% {
+        background: url("../Images/Natsuki2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        width: 100%;
+        height :100%;
+    }
+    40% {
+        background: url("../Images/Natsuki3.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        width: 100%;
+        height :100%;
+    }
+    60% {
+        background: url("../Images/Natsuki4.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        width: 100%;
+        height :100%;
+    }
+    80% {
+        background: url("../Images/Natsuki5.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        width: 100%;
+        height :100%;
+    }
+    100% {
+        background: url("../Images/Natsuki1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        width: 100%;
+        height :100%;
+    }
+}
+
+/* The place containing the text and all */
+#wrapper {
+    /*animation: slide 50s cubic-bezier(0.8, 0, 0, 0.8) infinite ; */
+    opacity : 0.75;
+    padding-bottom : 6.55%;
+    padding-top: 6.5%;
+    width :100%;
+    height: 100%;
+}
+
+/* Menu de navigation */
+nav {
+    position : sticky;
+    Top : 0;
+    margin-left: 5%;
+    height: 8%;
+    width: 35%;
+    text-shadow:
+      -1px -1px 0 pink,
+       1px -1px 0 black,
+      -1px 1px 0 hotpink,
+       1px 1px 0 hotpink;
+}
+
+/* Liste du menu */
+#Navigation_Menu{
+    display: inline-block;
+    margin: 2% 0% 0% 0%;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.Navigation {
+    display: inline;
+}
+
+
+/*Drop-down Menu*/
+.DropMenu {
+    padding: 1.5% 7% 1.5% 7%;
+    transition: background-color 0.4s;
+    display: inline-block;
+}
+
+.DropMenu:link {
+    color: deeppink;
+}
+
+.DropMenu:visited {
+    color: deeppink;
+}
+
+.DropMenu:hover {
+    color: blueviolet;
+    background-color: pink;
+}
+
+.DropMenu:checked {
+    color: deeppink;
+}
+
+#Liste {
+    overflow: hidden;
+}
+
+/* Dropdown download-btn */
+#Liste .dropbtn {
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-shadow:
+       -1px -1px 0 pink,
+        1px -1px 0 black,
+       -1px 1px 0 hotpink,
+        1px 1px 0 hotpink;
+    margin: 0; /* Important for vertical align on mobile phones */
+    color: deeppink;
+    background-color: transparent;
+    transition: background-color 0.4s;
+    display: inline-block;
+}
+
+.dropbtn:hover {
+    background-color: pink;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 1.9%;
+    margin-left: -24%;
+    background-color: pink;
+    width: 65%;
+    z-index: 1;
+}
+
+
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: pink;
+    padding: 1.6% 7% 1.85% 7%;
+    display: block;
+    text-align: middle;
+    text-decoration-line: none;
+}
+
+/* Show the dropdown menu on hover */
+.DropMenu:hover .dropdown-content {
+    display: block;
+    transition: background-color 0.4s;
+}
+
+.dropdown-content a:hover {
+    background-color: pink;
+}
+
+
+
+/* Custom des liens */
+a {
+    padding: 1.6% 3% 1.85% 3%;
+    transition: background-color 0.4s;
+    display: inline-block;
+    text-decoration-line: none;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    color: deeppink;
+    text-shadow:
+     -1px -1px 0 pink,
+      1px -1px 0 black,
+      -1px 1px 0 hotpink,
+       1px 1px 0 hotpink;
+}
+
+h1 {
+    font-size: 5em;
+    margin-top: -40px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+
+#TeamTitle {
+    width: 100%;
+    margin-top: 10%;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3em;
+    text-shadow:
+     -1px -1px 0 white,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+       1px 1px 0 black;
+}
+
+#Tweet {
+    background: url("../Images/Cute_Frame.png");
+    background-size: cover;
+    height: 70%;
+    margin-top: 8%;
+    margin-left: 15%;
+    margin-right:15%;
+    padding-bottom: 10.5%;
+    opacity: 0.75;
+}
+
+h5 {
+    padding-top: 12%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+h4 {
+    padding-left: 15%;
+    padding-bottom: 3%;
+    font-size: 1.5em;
+}
+
+#Tweet p {
+    width: 70%;
+    padding-left: 15%;
+    padding-bottom: 5%;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+a:link {
+    color: deeppink;
+}
+
+a:visited {
+    color: deeppink;
+}
+
+a:hover {
+    color: blueviolet;
+    background-color: pink;
+}
+
+a:checked {
+    color: deeppink;
+}
+
+footer {
+    width: 95%;
+    margin-top: 10%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow:
+     -1px -1px 0 white,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+       1px 1px 0 black;
+}
+
+#OldDownloads {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 120px;
+    width: auto;
+    padding: 5%;
+    padding-top: 5px;
+    min-height: 200px;
+    border: 3px solid rgb(255, 225, 241);
+    outline: 6px solid rgb(255, 189, 225);
+    background-color: white;
+}
+#OldDownloads ul {
+    column-count: 3;
+    column-gap: 70px;
+    scroll-margin-top: 200px;
+}
+#OldDownloads ul li {
+    margin-top: 5px;
+    list-style-type: none;
+}
+
+#OldDownloads a{
+    color: black;
+    font-size: 25px;
+    transition-duration: 0s;
+    display: block;
+    padding: 0px;
+}
+
+#OldDownloads a:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: hotpink;
+    background-color: white;
+}
+
+.release-type {
+    color: deeppink;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#Contact {
+    color: deeppink;
+    text-shadow:
+    -0.6px -0.6px 0 rgb(255, 226, 242),
+    0.6px -0.6px 0 rgb(255, 226, 242),
+     -0.6px 0.6px 0 rgb(255, 226, 242),
+     0.6px 0.6px 0 rgb(255, 226, 242);
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 20%;
+}
+
+#Contact a {
+    margin-left: auto;
+    margin-right: auto;
+    transition-duration: 0.3s;
+}
+
+#Contact a:hover {
+    background-color: pink;
+}
+
+.side-left {
+    float: left;
+    text-align: left;
+}
+
+.side-right {
+    float: right;
+    text-align: right;
+}
+#Contact p {
+    margin-top: 20px;
+}
