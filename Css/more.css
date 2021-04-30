@@ -335,11 +335,18 @@ footer {
     outline: 6px solid rgb(255, 189, 225);
     background-color: white;
 }
-#OldDownloads ul {
+#FullReleases {
     column-count: 3;
     column-gap: 70px;
     scroll-margin-top: 200px;
 }
+
+#Alpha {
+    column-count: 5;
+    column-gap: 30px;
+    scroll-margin-top: 300px;
+}
+
 #OldDownloads ul li {
     margin-top: 5px;
     list-style-type: none;
@@ -384,14 +391,25 @@ footer {
     margin-bottom: 20%;
 }
 
-#Contact a {
+#Contact a:link {
     margin-left: auto;
     margin-right: auto;
     transition-duration: 0.3s;
 }
 
-#Contact a:hover {
+#Contact a:link:hover {
     background-color: pink;
+}
+
+.unavailable {
+    color: gray !important;
+}
+
+.unavailable:hover {
+    cursor: default !important;
+    color: gray !important;
+    text-shadow: none !important;
+    font-weight: 400 !important;
 }
 
 .side-left {

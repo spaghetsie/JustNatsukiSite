@@ -126,6 +126,10 @@ nav {
     display: inline;
 }
 
+/*I know this is really not ideal but if it works it works*/
+#fixbackground {
+    background-color: transparent;
+}
 
 /*Drop-down Menu*/
 .DropMenu {
