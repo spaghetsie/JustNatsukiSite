@@ -126,6 +126,9 @@ nav {
     display: inline;
 }
 
+#more:hover {
+    background-color: transparent;
+}
 
 /*Drop-down Menu*/
 .DropMenu {
@@ -322,6 +325,7 @@ a:checked {
 footer {
     width: 95%;
     margin-top: 10%;
+    padding-bottom: 15px;
     text-align: right;
     font-weight: bold;
     font-size: 1.5em;
@@ -375,18 +379,17 @@ footer {
 
 .download-dropmenu-content a {
     margin-top: 10px;
-    height: 30px;
-}
-
-.download-dropmenu-content img {
-    height: 30px;
     margin: auto;
     margin-top: 10px;
     background-color: rgba(255, 182, 193, 0.7);
     padding: 10px;
 }
 
-.download-dropmenu-content img:hover {
+.download-dropmenu-content img {
+    height: 30px;
+}
+
+.download-dropmenu-content a:hover {
     background-color: pink;
 }
 

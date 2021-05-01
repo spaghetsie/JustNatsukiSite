@@ -127,7 +127,7 @@ nav {
 }
 
 /*I know this is really not ideal but if it works it works*/
-#fixbackground {
+#more:hover {
     background-color: transparent;
 }
 
@@ -450,6 +450,7 @@ footer {
     opacity: 0.75;
     width: 95%;
     margin-top: 10%;
+    padding-bottom: 15px;
     text-align: right;
     font-weight: bold;
     font-size: 1.5em;
