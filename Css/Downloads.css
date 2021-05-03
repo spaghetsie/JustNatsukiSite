@@ -345,10 +345,10 @@ footer {
 }
 
 .download-btn {
-    border: 3px solid rgb(255, 225, 241);
+    border: 3px solid rgb(255, 189, 225);
     outline: 6px solid rgb(255, 189, 225);
+    background-color: rgb(255, 230, 244);
     color: black;
-    background-color: white;
     height: 70%;
     margin-right: auto;
     margin-left: auto;
@@ -361,8 +361,8 @@ footer {
 }
  
 .download-btn:hover {
-    border-color: rgb(255, 189, 225);
-    background-color: rgb(255, 230, 244);
+    border: 3px solid rgb(255, 225, 241);
+    background-color: white;
 }
 
 .download-dropmenu-content {

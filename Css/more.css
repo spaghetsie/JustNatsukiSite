@@ -16,7 +16,7 @@ body {
     width : 100%;
     height : 100%;
     font-family: 'Natsuki_Handwriting',sans-serif;
-    background-image: url(../Images/JNBG.gif);
+    background-image: url("../Images/Natsuki_Room.png");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -32,7 +32,7 @@ body {
     animation: slide 2s;
 }
 
-/* The background and all that */
+/* The background and all that
 @keyframes slide {
     0% {
         background: url("../Images/Natsuki1.png");
@@ -88,6 +88,107 @@ body {
         width: 100%;
         height :100%;
     }
+}
+*/
+
+@keyframes dust_animation1 {
+    0% {
+        opacity: 0;
+        transform: translateX(0px) translateY(0px);
+    }
+    10% {opacity: 1;}
+    40% {opacity: 1;}
+    45% {opacity: 0.5;}
+    50% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {
+        opacity: 0;
+        transform: translateX(-400px) translateY(400px);
+    }
+}
+@keyframes dust_animation2 {
+    0% {
+        opacity: 0;
+        transform: translateX(0px) translateY(0px);
+    }
+    10% {opacity: 1;}
+    40% {opacity: 1;}
+    45% {opacity: 0.5;}
+    50% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {
+        opacity: 0;
+        transform: translateX(-400px) translateY(400px);
+    }
+}
+@keyframes dust_animation3 {
+    0% {
+        opacity: 0;
+        transform: translateX(0px) translateY(0px);
+    }
+    10% {opacity: 1;}
+    40% {opacity: 1;}
+    45% {opacity: 0.5;}
+    50% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {
+        opacity: 0;
+        transform: translateX(-400px) translateY(400px);
+    }
+}
+@keyframes dust_animation4 {
+    0% {
+        opacity: 0;
+        transform: translateX(0px) translateY(0px);
+    }
+    10% {opacity: 1;}
+    40% {opacity: 1;}
+    45% {opacity: 0.5;}
+    50% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {
+        opacity: 0;
+        transform: translateX(-400px) translateY(400px);
+    }
+}
+
+.dust {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    position: absolute;
+    background-position: center;
+    opacity: 0;
+}
+
+#dust1 {
+    animation-name: dust_animation1;
+    background-image: url('../Images/dust1.png');
+    animation-duration: 40s;
+}
+#dust2 {
+    animation-name: dust_animation2;
+    background-image: url('../Images/dust2.png');
+    animation-duration: 45s;
+    animation-delay: 10s;
+}
+#dust3 {
+    animation-name: dust_animation3;
+    background-image: url('../Images/dust3.png');
+    animation-duration: 35s;
+    animation-delay: 20s;
+}
+#dust4 {
+    animation-name: dust_animation4;
+    background-image: url('../Images/dust4.png');
+    animation-duration: 40s;
+    animation-delay: 30s;
+}
+
+#slider {
+    height: 100%;
 }
 
 /* The place containing the text and all */
