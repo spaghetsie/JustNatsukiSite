@@ -91,52 +91,7 @@ body {
 }
 */
 
-@keyframes dust_animation1 {
-    0% {
-        opacity: 0;
-        transform: translateX(0px) translateY(0px);
-    }
-    10% {opacity: 1;}
-    40% {opacity: 1;}
-    45% {opacity: 0.5;}
-    50% {opacity: 1;}
-    90% {opacity: 1;}
-    100% {
-        opacity: 0;
-        transform: translateX(-400px) translateY(400px);
-    }
-}
-@keyframes dust_animation2 {
-    0% {
-        opacity: 0;
-        transform: translateX(0px) translateY(0px);
-    }
-    10% {opacity: 1;}
-    40% {opacity: 1;}
-    45% {opacity: 0.5;}
-    50% {opacity: 1;}
-    90% {opacity: 1;}
-    100% {
-        opacity: 0;
-        transform: translateX(-400px) translateY(400px);
-    }
-}
-@keyframes dust_animation3 {
-    0% {
-        opacity: 0;
-        transform: translateX(0px) translateY(0px);
-    }
-    10% {opacity: 1;}
-    40% {opacity: 1;}
-    45% {opacity: 0.5;}
-    50% {opacity: 1;}
-    90% {opacity: 1;}
-    100% {
-        opacity: 0;
-        transform: translateX(-400px) translateY(400px);
-    }
-}
-@keyframes dust_animation4 {
+@keyframes dust_animation {
     0% {
         opacity: 0;
         transform: translateX(0px) translateY(0px);
@@ -155,33 +110,31 @@ body {
 .dust {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    animation-name: dust_animation;
     width: 100%;
     height: 100%;
     background-attachment: fixed;
     position: absolute;
     background-position: center;
     opacity: 0;
+    z-index: -1;
 }
 
 #dust1 {
-    animation-name: dust_animation1;
     background-image: url('../Images/dust1.png');
     animation-duration: 40s;
 }
 #dust2 {
-    animation-name: dust_animation2;
     background-image: url('../Images/dust2.png');
     animation-duration: 45s;
     animation-delay: 10s;
 }
 #dust3 {
-    animation-name: dust_animation3;
     background-image: url('../Images/dust3.png');
     animation-duration: 35s;
     animation-delay: 20s;
 }
 #dust4 {
-    animation-name: dust_animation4;
     background-image: url('../Images/dust4.png');
     animation-duration: 40s;
     animation-delay: 30s;
@@ -472,6 +425,17 @@ footer {
     background-color: white;
 }
 
+.unavailable {
+    color: gray !important;
+}
+
+.unavailable:hover {
+    cursor: default !important;
+    color: gray !important;
+    text-shadow: none !important;
+    font-weight: 400 !important;
+}
+
 .release-type {
     color: deeppink;
     margin-top: 30px;
@@ -491,9 +455,10 @@ footer {
     font-size: 25px;
     font-weight: bold;
     margin-top: 20px;
-    margin-right: 15%;
-    margin-left: 15%;
-    margin-bottom: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 12%;
+    text-align: center;
 }
 
 #Contact a:link {
@@ -504,17 +469,6 @@ footer {
 
 #Contact a:link:hover {
     background-color: pink;
-}
-
-.unavailable {
-    color: gray !important;
-}
-
-.unavailable:hover {
-    cursor: default !important;
-    color: gray !important;
-    text-shadow: none !important;
-    font-weight: 400 !important;
 }
 
 .side-left {
@@ -528,4 +482,11 @@ footer {
 }
 #Contact p {
     margin-top: 20px;
+    display: inline-block;
+}
+#CenterContacts {
+    display: inline-block;
+}
+#ContactContents {
+    width: 100%;
 }
