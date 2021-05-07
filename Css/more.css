@@ -35,24 +35,12 @@ body {
     z-index: -1;
 }
 
-#windows {
+.window {
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: -2;
-    text-align: center;
-}
-
-.window {
-    margin-top: 5%;
-    margin-left: -1000px;
-    margin-right: -1000px;
-    width: 380px;
-    height: 100%;
-    background-attachment: fixed;
-    position: relative;
     overflow: hidden;
-    display: inline-block;
+    z-index: -2;
 }
 .stars {
     background-image: url("../Images/stars.png");
@@ -63,19 +51,17 @@ body {
 .space {
     background-image: url("../Images/space.png");
     height: 100%;
-    width: 1017px;
+    width: 200%;
     position: absolute;
-    background-repeat: repeat-x;
-    animation: move_space 50s infinite linear;
+    animation: move_space 80s infinite linear;
 
 }
 .space_dust {
     background-image: url("../Images/space_dust.png");
-    background-size: 640px;
-    background-repeat: repeat-x;
+    background-size: 12.5%;
     height: 100%;
-    width: 1280px;
-    animation: move_dust 10s linear infinite;
+    width: 400%;
+    animation: move_dust 120s linear infinite;
     position: absolute;
 }
 .space_dust_expand {
@@ -105,10 +91,10 @@ body {
 
 @keyframes expand_dust {
     0% {opacity: 0;}
-    30% {opacity: 0;}
-    45% {opacity: 1;}
-    50% {opacity: 1;}
-    65% {opacity: 0;}
+    32% {opacity: 0;}
+    46% {opacity: 1;}
+    48% {opacity: 1;}
+    63% {opacity: 0;}
     100% {opacity: 0;}
 }
 
@@ -475,33 +461,39 @@ footer {
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 120px;
-    width: auto;
     padding: 5%;
     padding-top: 5px;
     min-height: 200px;
     border: 3px solid rgb(255, 225, 241);
     outline: 6px solid rgb(255, 189, 225);
     background-color: white;
+    text-align: center;
 }
 #FullReleases {
+    display: inline-block;
+    text-align: left;
     column-count: 3;
-    column-gap: 70px;
+    column-gap: 100px;
     scroll-margin-top: 200px;
 }
 
 #Alpha {
+    display: inline-block;
+    text-align: left;
     column-count: 5;
-    column-gap: 30px;
+    column-gap: 50px;
     scroll-margin-top: 300px;
 }
 
 #OldDownloads ul li {
-    margin-top: 5px;
     list-style-type: none;
+    background-color: transparent;
+    margin-bottom: 5px;
 }
 
 #OldDownloads a{
     color: black;
+    background-color: transparent;
     font-size: 25px;
     transition-duration: 0s;
     display: block;
@@ -528,8 +520,9 @@ footer {
 
 .release-type {
     color: deeppink;
+    background-color: transparent;
     margin-top: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
