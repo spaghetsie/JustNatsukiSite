@@ -14,10 +14,7 @@ body {
     width : 100%;
     height : 100%;
     font-family: 'Natsuki_Handwriting',sans-serif;
-    background-image: url(../Images/JNBG.gif);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    margin-top: -16px;
 }
 
 #background {
@@ -25,73 +22,152 @@ body {
     background: rgba(0, 0, 0, 0.3);
 }
 
+/*Natsuki background*/
+#Natsuki {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Images/Natsuki_Room.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    margin: 0;
+    z-index: -1;
+}
+/* universe-ey background*/
+.window {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.stars {
+    background-image: url("../Images/stars.png");
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+/*galaxies floating in the background*/
+.space {
+    background-image: url("../Images/space.png");
+    background-size: 12.5%;
+    height: 100%;
+    width: 400%;
+    position: absolute;
+    animation: move_space 240s infinite linear;
+
+}
+
+/*dust floating in the bg*/
+.space_dust {
+    background-image: url("../Images/space_dust.png");
+    background-size: 12.5%;
+    height: 100%;
+    width: 400%;
+    animation: move_dust 120s linear infinite;
+    position: absolute;
+}
+/*overlay for "expanding" the dust*/
+.space_dust_expand {
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: overlay;
+    animation: expand_dust 30s infinite;
+}
+/*overlay for making the dust pink*/
+.space_dust_color {
+    position: absolute;
+    background-color: hotpink;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: overlay;
+}
+/*animation for moving the dust*/
+@keyframes move_dust {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+/*animation for expanding the dust*/
+@keyframes expand_dust {
+    0% {opacity: 0;}
+    32% {opacity: 0;}
+    46% {opacity: 1;}
+    48% {opacity: 1;}
+    63% {opacity: 0;}
+    100% {opacity: 0;}
+}
+/*animation for moving the galaxies*/
+@keyframes move_space {
+    0% {transform: translateX(0) translateY(0);}
+    100% {transform: translateX(-50%) translateY(0);}
+}
+
 /* The Slider for the animation */
 #load {
     animation: slide 2s;
 }
-
-/* The background and all that */
-@keyframes slide {
+/*animation for dust particles*/
+@keyframes dust_animation {
     0% {
-        background: url("../Images/Natsuki1.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
+        opacity: 0;
+        transform: translateX(0px) translateY(0px);
     }
-    20% {
-        background: url("../Images/Natsuki2.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
-    }
-    40% {
-        background: url("../Images/Natsuki3.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
-    }
-    60% {
-        background: url("../Images/Natsuki4.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
-    }
-    80% {
-        background: url("../Images/Natsuki5.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
-    }
+    10% {opacity: 1;}
+    40% {opacity: 1;}
+    45% {opacity: 0.5;}
+    50% {opacity: 1;}
+    90% {opacity: 1;}
     100% {
-        background: url("../Images/Natsuki1.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
+        opacity: 0;
+        transform: translateX(-400px) translateY(400px);
     }
+}
+/*shared css properties of dust particles*/
+.dust {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: dust_animation;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    position: fixed;
+    background-position: center;
+    opacity: 0;
+    z-index: -1;
+}
+/*individual dust particle properties*/
+#dust1 {
+    background-image: url('../Images/dust1.png');
+    animation-duration: 40s;
+}
+#dust2 {
+    background-image: url('../Images/dust2.png');
+    animation-duration: 45s;
+    animation-delay: 10s;
+}
+#dust3 {
+    background-image: url('../Images/dust3.png');
+    animation-duration: 35s;
+    animation-delay: 20s;
+}
+#dust4 {
+    background-image: url('../Images/dust4.png');
+    animation-duration: 40s;
+    animation-delay: 30s;
 }
 
 /* The place containing the text and all */
 #wrapper {
     /*animation: slide 50s cubic-bezier(0.8, 0, 0, 0.8) infinite ; */
-    opacity : 0.75;
+    opacity : 0.85;
     padding-bottom : 6.55%;
     padding-top: 6.5%;
     width :100%;
@@ -235,7 +311,7 @@ header {
       -1px 1px 0 hotpink,
        1px 1px 0 hotpink;
 }
-
+/*title stuff*/
 h1 {
     font-size: 5em;
     margin-top: -40px;
@@ -244,35 +320,7 @@ h1 {
 h2 {
     font-size: 1.5em;
 }
-
-
-#TeamTitle {
-    width: 100%;
-    margin-top: 10%;
-    text-decoration-line: underline;
-    text-decoration-style: double;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    font-size: 3em;
-    text-shadow:
-     -1px -1px 0 white,
-      1px -1px 0 black,
-      -1px 1px 0 black,
-       1px 1px 0 black;
-}
-
-.side-left {
-    text-align: left;
-    width: 30%;
-}
-
-.side-right {
-    text-align: right;
-    width: 30%;
-}
-
-
+/*short blog post about the newest update*/
 #Tweet {
     background: url("../Images/Cute_Frame.png");
     background-size: cover;
@@ -283,7 +331,7 @@ h2 {
     padding-bottom: 10.5%;
     opacity: 0.75;
 }
-
+/*sub-title stuff*/
 h5 {
     padding-top: 12%;
     padding-bottom: 5%;
@@ -304,7 +352,7 @@ h4 {
     font-size: 1em;
     font-weight: bold;
 }
-
+/*default link css*/
 a:link {
     color: deeppink;
 }
@@ -321,7 +369,7 @@ a:hover {
 a:checked {
     color: deeppink;
 }
-
+/*credits most likely*/
 footer {
     width: 95%;
     margin-top: 10%;
@@ -335,7 +383,7 @@ footer {
       -1px 1px 0 black,
        1px 1px 0 black;
 }
-
+/*download div*/
 .download-dropmenu {
     margin-top: -40px;
     margin-left: 15%;
@@ -343,7 +391,7 @@ footer {
     text-align: center;
     position: relative;
 }
-
+/*download button*/
 .download-btn {
     border: 3px solid rgb(255, 189, 225);
     outline: 6px solid rgb(255, 189, 225);
@@ -364,7 +412,7 @@ footer {
     border: 3px solid rgb(255, 225, 241);
     background-color: white;
 }
-
+/*contents of download dropmenu*/
 .download-dropmenu-content {
     display: none;
     position: relative;
@@ -376,7 +424,7 @@ footer {
     padding: 0px;
     z-index: 1;
 }
-
+/*links inside download dropmenu*/
 .download-dropmenu-content a {
     margin-top: 10px;
     margin: auto;
@@ -384,7 +432,7 @@ footer {
     background-color: rgba(255, 182, 193, 0.7);
     padding: 10px;
 }
-
+/*images inside download dropmenu*/
 .download-dropmenu-content img {
     height: 30px;
 }
@@ -392,18 +440,18 @@ footer {
 .download-dropmenu-content a:hover {
     background-color: pink;
 }
-
+/*show dropmenu*/
 .show {
     display: block;
 }
-
+/*stuff under blog post (sorry had no idea how to name it)*/
 #underTweet{
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 20px;
     text-align: left;
 }
-
+/*text pointing to changelog link*/
 #check-this-out {
     display: inline-block;
     margin-top: 25px;
@@ -417,7 +465,7 @@ footer {
      -0.8px 0.8px 0 white,
      0.8px 0.8px 0 white;
 }
-
+/*link to github changelog*/
 #changelog {
     float: right;
     background-color: rgba(255, 182, 193, 0.7);

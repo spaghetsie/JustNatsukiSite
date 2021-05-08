@@ -16,6 +16,7 @@ body {
     width : 100%;
     height : 100%;
     font-family: 'Natsuki_Handwriting',sans-serif;
+    margin-top: -16px;
 }
 
 #background {
@@ -23,6 +24,7 @@ body {
     background: rgba(0, 0, 0, 0.3);
 }
 
+/*Natsuki background*/
 #Natsuki {
     width: 100%;
     height: 100%;
@@ -34,7 +36,7 @@ body {
     margin: 0;
     z-index: -1;
 }
-
+/* universe-ey background*/
 .window {
     width: 100%;
     height: 100%;
@@ -42,20 +44,25 @@ body {
     overflow: hidden;
     z-index: -2;
 }
+
 .stars {
     background-image: url("../Images/stars.png");
     height: 100%;
     width: 100%;
     position: absolute;
 }
+/*galaxies floating in the background*/
 .space {
     background-image: url("../Images/space.png");
+    background-size: 12.5%;
     height: 100%;
-    width: 200%;
+    width: 400%;
     position: absolute;
-    animation: move_space 80s infinite linear;
+    animation: move_space 240s infinite linear;
 
 }
+
+/*dust floating in the bg*/
 .space_dust {
     background-image: url("../Images/space_dust.png");
     background-size: 12.5%;
@@ -64,6 +71,7 @@ body {
     animation: move_dust 120s linear infinite;
     position: absolute;
 }
+/*overlay for "expanding" the dust*/
 .space_dust_expand {
     position: absolute;
     background-color: white;
@@ -72,6 +80,7 @@ body {
     mix-blend-mode: overlay;
     animation: expand_dust 30s infinite;
 }
+/*overlay for making the dust pink*/
 .space_dust_color {
     position: absolute;
     background-color: hotpink;
@@ -79,7 +88,7 @@ body {
     width: 100%;
     mix-blend-mode: overlay;
 }
-
+/*animation for moving the dust*/
 @keyframes move_dust {
     0% {
         transform: translateX(0) translateY(0);
@@ -88,7 +97,7 @@ body {
         transform: translateX(-50%) translateY(0);
     }
 }
-
+/*animation for expanding the dust*/
 @keyframes expand_dust {
     0% {opacity: 0;}
     32% {opacity: 0;}
@@ -97,76 +106,17 @@ body {
     63% {opacity: 0;}
     100% {opacity: 0;}
 }
-
+/*animation for moving the galaxies*/
 @keyframes move_space {
     0% {transform: translateX(0) translateY(0);}
-    100% {transform: translateX(-678px) translateY(0);}
+    100% {transform: translateX(-50%) translateY(0);}
 }
 
 /* The Slider for the animation */
 #load {
     animation: slide 2s;
 }
-
-/* The background and all that
-@keyframes slide {
-    0% {
-        background: url("../Images/Natsuki1.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
-    }
-    20% {
-        background: url("../Images/Natsuki2.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
-    }
-    40% {
-        background: url("../Images/Natsuki3.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
-    }
-    60% {
-        background: url("../Images/Natsuki4.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
-    }
-    80% {
-        background: url("../Images/Natsuki5.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
-    }
-    100% {
-        background: url("../Images/Natsuki1.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        width: 100%;
-        height :100%;
-    }
-}
-*/
-
+/*animation for dust particles*/
 @keyframes dust_animation {
     0% {
         opacity: 0;
@@ -182,7 +132,7 @@ body {
         transform: translateX(-400px) translateY(400px);
     }
 }
-
+/*shared css properties of dust particles*/
 .dust {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -195,7 +145,7 @@ body {
     opacity: 0;
     z-index: -1;
 }
-
+/*individual dust particle properties*/
 #dust1 {
     background-image: url('../Images/dust1.png');
     animation-duration: 40s;
@@ -223,7 +173,7 @@ body {
 /* The place containing the text and all */
 #wrapper {
     /*animation: slide 50s cubic-bezier(0.8, 0, 0, 0.8) infinite ; */
-    opacity : 0.75;
+    opacity : 0.85;
     padding-bottom : 6.55%;
     padding-top: 6.5%;
     width :100%;
@@ -367,7 +317,7 @@ header {
       -1px 1px 0 hotpink,
        1px 1px 0 hotpink;
 }
-
+/*titles and stuff*/
 h1 {
     font-size: 5em;
     margin-top: -40px;
@@ -375,34 +325,6 @@ h1 {
 
 h2 {
     font-size: 1.5em;
-}
-
-
-#TeamTitle {
-    width: 100%;
-    margin-top: 10%;
-    text-decoration-line: underline;
-    text-decoration-style: double;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    font-size: 3em;
-    text-shadow:
-     -1px -1px 0 white,
-      1px -1px 0 black,
-      -1px 1px 0 black,
-       1px 1px 0 black;
-}
-
-#Tweet {
-    background: url("../Images/Cute_Frame.png");
-    background-size: cover;
-    height: 70%;
-    margin-top: 8%;
-    margin-left: 15%;
-    margin-right:15%;
-    padding-bottom: 10.5%;
-    opacity: 0.75;
 }
 
 h5 {
@@ -417,15 +339,7 @@ h4 {
     padding-bottom: 3%;
     font-size: 1.5em;
 }
-
-#Tweet p {
-    width: 70%;
-    padding-left: 15%;
-    padding-bottom: 5%;
-    font-size: 1em;
-    font-weight: bold;
-}
-
+/*default link css*/
 a:link {
     color: deeppink;
 }
@@ -442,7 +356,7 @@ a:hover {
 a:checked {
     color: deeppink;
 }
-
+/*credits most likely*/
 footer {
     width: 95%;
     margin-top: 10%;
@@ -456,7 +370,7 @@ footer {
       -1px 1px 0 black,
        1px 1px 0 black;
 }
-
+/*box with old download links*/
 #OldDownloads {
     margin-left: 15%;
     margin-right: 15%;
@@ -469,6 +383,7 @@ footer {
     background-color: white;
     text-align: center;
 }
+/*contains all full releases links*/
 #FullReleases {
     display: inline-block;
     text-align: left;
@@ -476,7 +391,7 @@ footer {
     column-gap: 100px;
     scroll-margin-top: 200px;
 }
-
+/*contains all alpha links*/
 #Alpha {
     display: inline-block;
     text-align: left;
@@ -484,13 +399,13 @@ footer {
     column-gap: 50px;
     scroll-margin-top: 300px;
 }
-
+/*css for elements of a list inside OldDownloads (both full releases and alphas)*/
 #OldDownloads ul li {
     list-style-type: none;
     background-color: transparent;
     margin-bottom: 5px;
 }
-
+/*download links*/
 #OldDownloads a{
     color: black;
     background-color: transparent;
@@ -506,7 +421,7 @@ footer {
     color: hotpink;
     background-color: white;
 }
-
+/*css for unavailable downloads*/
 .unavailable {
     color: gray !important;
 }
@@ -517,7 +432,7 @@ footer {
     text-shadow: none !important;
     font-weight: 400 !important;
 }
-
+/*title for download links (Full releases/Alpha)*/
 .release-type {
     color: deeppink;
     background-color: transparent;
@@ -527,7 +442,7 @@ footer {
     font-size: 30px;
     font-weight: bold;
 }
-
+/*contact title/header*/
 #Contact {
     color: deeppink;
     text-shadow:
@@ -543,7 +458,7 @@ footer {
     margin-bottom: 12%;
     text-align: center;
 }
-
+/*links to different ways to contact us*/
 #Contact a:link {
     margin-left: auto;
     margin-right: auto;
@@ -553,23 +468,26 @@ footer {
 #Contact a:link:hover {
     background-color: pink;
 }
-
+/*float stuff left*/
 .side-left {
     float: left;
     text-align: left;
 }
-
+/*float stuff right*/
 .side-right {
     float: right;
     text-align: right;
 }
+/*descriptions for links to contact us*/
 #Contact p {
     margin-top: 20px;
     display: inline-block;
 }
+/*center all elements relating to Contact*/
 #CenterContacts {
     display: inline-block;
 }
+/*keep size of CenterContacts*/
 #ContactContents {
     width: 100%;
 }
