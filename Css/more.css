@@ -173,8 +173,7 @@ body {
 /* The place containing the text and all */
 #wrapper {
     /*animation: slide 50s cubic-bezier(0.8, 0, 0, 0.8) infinite ; */
-    opacity : 0.85;
-    padding-bottom : 6.55%;
+    opacity : 1;
     padding-top: 6.5%;
     width :100%;
     height: 100%;
@@ -185,6 +184,7 @@ nav {
     position : sticky;
     top : 0;
     margin-left: 5%;
+    padding-top: 25px;
     height: 8%;
     width: 35%;
     text-shadow:
@@ -269,7 +269,7 @@ header {
 /*titles and stuff*/
 h1 {
     font-size: 5em;
-    margin-top: -40px;
+    margin-top: -20px;
 }
 
 h2 {
@@ -323,6 +323,7 @@ footer {
 #OldDownloads {
     margin-left: 15%;
     margin-right: 15%;
+    margin-top: 40px;
     margin-bottom: 120px;
     padding: 5%;
     padding-top: 5px;
