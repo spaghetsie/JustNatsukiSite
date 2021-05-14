@@ -180,10 +180,10 @@ body {
     height: 100%;
 }
 
-/* Menu de navigation */
+/* navigation menu */
 nav {
     position : sticky;
-    Top : 0;
+    top : 0;
     margin-left: 5%;
     height: 8%;
     width: 35%;
@@ -192,116 +192,65 @@ nav {
        1px -1px 0 black,
       -1px 1px 0 hotpink,
        1px 1px 0 hotpink;
-}
-
-/* Liste du menu */
-#Navigation_Menu{
     display: inline-block;
-    margin: 2% 0% 0% 0%;
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 30px;
+    z-index: 100000;
+    text-align: left;
+}
+/* root of navigation links*/
+nav ul {
+    list-style: none;
+}
+/*elements of navigation menu*/
+nav li {
+    display: inline-block;
+    position: relative;
     text-align: center;
+    margin-right: 10px;
+}
+/*links inside navigation menu*/
+nav a {
+    padding: 5px 10px 5px 10px;
+    min-width: 70px;
+    box-sizing: border-box;
     width: 100%;
 }
-
-.Navigation {
-    display: inline;
+/*on hover of links inside navigation menu*/
+nav a:hover {
+    background-color: rgb(255, 192, 206);
 }
-
-#more:hover {
-    background-color: transparent;
-}
-
-/*Drop-down Menu*/
-.DropMenu {
-    padding: 1.5% 7% 1.5% 7%;
-    transition: background-color 0.4s;
-    display: inline-block;
-}
-
-.DropMenu:link {
-    color: deeppink;
-}
-
-.DropMenu:visited {
-    color: deeppink;
-}
-
-.DropMenu:hover {
-    color: blueviolet;
-    background-color: pink;
-}
-
-.DropMenu:checked {
-    color: deeppink;
-}
-
-#Liste {
-    overflow: hidden;
-}
-
-/* Dropdown download-btn */
-#Liste .dropbtn {
-    border: none;
-    outline: none;
-    font-size: 1em;
-    font-weight: bold;
-    text-shadow:
-       -1px -1px 0 pink,
-        1px -1px 0 black,
-       -1px 1px 0 hotpink,
-        1px 1px 0 hotpink;
-    margin: 0; /* Important for vertical align on mobile phones */
-    color: deeppink;
-    background-color: transparent;
-    transition: background-color 0.4s;
-    display: inline-block;
-}
-
-.dropbtn:hover {
-    background-color: pink;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
+/*dropdown menu*/
+nav ul ul {
     display: none;
     position: absolute;
-    margin-top: 1.9%;
-    margin-left: -24%;
-    background-color: pink;
-    width: 65%;
-    z-index: 1;
+    top: 100%;
+    left: -88px;
+    overflow: hidden;
+    padding-top: 3px;
 }
-
-
-
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    float: none;
-    color: pink;
-    padding: 1.6% 7% 1.85% 7%;
-    display: block;
-    text-align: middle;
-    text-decoration-line: none;
+/*element of dropdown menu*/
+nav ul ul li{
+    width: 260px;
 }
-
-/* Show the dropdown menu on hover */
-.DropMenu:hover .dropdown-content {
-    display: block;
-    transition: background-color 0.4s;
-}
-
-.dropdown-content a:hover {
+/*link inside element of dropdown menu*/
+nav ul ul li a {
+    box-sizing: border-box;
+    width: 100%;
     background-color: pink;
 }
-
-
+/*show dropdown menu*/
+nav ul li:hover > ul {
+    display: inline-block;
+}
+/*keep more highlighted*/
+nav ul li:last-child:hover {
+    background-color: pink;
+}
 
 /* Custom des liens */
 a {
     padding: 1.6% 3% 1.85% 3%;
-    transition: background-color 0.4s;
+    transition: background-color 0.2s;
     display: inline-block;
     text-decoration-line: none;
 }

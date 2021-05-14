@@ -8,6 +8,7 @@
     </head>
 
     <body>
+        
         <div class="window" style="margin-right: 20vw;">
             <div class="stars"></div>
             <div class="space"></div>
@@ -21,6 +22,7 @@
         <div class="dust" id="dust2"></div>
         <div class="dust" id="dust3"></div>
         <div class="dust" id="dust4"></div>
+    
         <div id="background">
             <div id="slider">
                 <div id="load"></div>
@@ -29,21 +31,19 @@
                 <div id="wrapper">
 
                 <!-- Navigation Menu -->
-                <nav>
-                    <ul id="Navigation_Menu">
-                        <li class="Navigation"><a href="Index.html">Home</a></li>
-                        <li class="Navigation"><a href="Downloads.html">Download</a></li>
-                        <li class="Navigation DropMenu">
-                            <a id="more" href="more.html">More</a>
+                <nav id="Navigation">
+                    <ul>
+                        <li><a href="Index.html">Home</a></li
+                        ><li><a href="Downloads.html">Download</a></li
+                        ><li id="Navigation-last"><a href="more.html">More</a>
 
-                            <div class="dropdown-content">
-                                <a href="more.html#FullReleases">Old Downloads</a>
-                                <a href="more.html#Alpha">Alpha Downloads</a>
-                                <a href="more.html#Contact">Contact</a>
-                            </div>
+                            <ul id="dropdown-content">
+                                <li><a href="more.html#FullReleases">Old Downloads</a></li>
+                                <li><a href="more.html#Alpha">Alpha Downloads</a></li>
+                                <li><a href="more.html#Contact">Contact</a></li>
+                            </ul>
                         </li>
                     </ul>
-
                 </nav>
 
                 <!-- Title -->
@@ -51,21 +51,19 @@
                     <h1>Download</h1>
                 </header>
 
-                </div>
+
                 <!--download button-->
-                <div>     
-                    <div class="download-dropmenu">
-                        <button onclick="showDropmenu()" class="download-btn">Latest - 4.3.0</button>
-                        <div id="downloadDropdown" class="download-dropmenu-content">
-                            <a style="margin-right: 20px;" href="https://github.com/Just-Natsuki-Team/NatsukiModDev/releases"><img src="Images/GH.png"></a>
-                            <a><img href="#somethin" src="Images/GDrive.png"></a>
-                            <a style="margin-left: 20px;" href="http://www.mediafire.com/file/7k7eauzeu7t1mqw/JustNatsuki-4.3.0-Mod.zip/file"><img src="Images/MediaFire.png"></a>
-                        </div>
+                <div class="download-dropmenu">
+                    <button onclick="showDropmenu()" class="download-btn">Latest - 4.3.0</button>
+                    <div id="downloadDropdown" class="download-dropmenu-content">
+                        <a style="margin-right: 20px;" href="https://github.com/Just-Natsuki-Team/NatsukiModDev/releases"><img src="Images/GH.png"></a>
+                        <a><img href="#somethin" src="Images/GDrive.png"></a>
+                        <a style="margin-left: 20px;" href="http://www.mediafire.com/file/7k7eauzeu7t1mqw/JustNatsuki-4.3.0-Mod.zip/file"><img src="Images/MediaFire.png"></a>
                     </div>
                     <script>
-                    function showDropmenu() {
-                    document.getElementById("downloadDropdown").classList.toggle("show");
-                    }
+                        function showDropmenu() {
+                            document.getElementById('downloadDropdown').classList.toggle("show");
+                        };
                     </script>
                 </div>
                 <!--blog post explaining changes in latest update-->
@@ -111,8 +109,13 @@
                 </div>
                 <!--checkout the whole changelog-->
                 <div id="underTweet">
-                    <div id="check-this-out">You can find the whole changelog here! -></div>
-                    <a href="https://github.com/Just-Natsuki-Team/NatsukiModDev" id="changelog"><img src="Images/GH.png" height="70px"></a>
+                    <div id="CenterUnderTweet">
+                    <div class="UnderTweetContents">
+                        <p id="check-this-out">You can find the whole changelog here! -></p>
+                        <a class="side-right" href="https://github.com/Just-Natsuki-Team/NatsukiModDev" id="changelog"><img src="Images/GH.png" height="70px"></a>
+                    </div>
+                    </div>
+                    
                 </div>
                 
                 <!-- Credits -->
@@ -121,7 +124,7 @@
                     <p>- All Credits to the website goes to the Just Natsuki Team</p>
 
                 </footer>
-
+                </div>
             </div>
         </div>
     </body>

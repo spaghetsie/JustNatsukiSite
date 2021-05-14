@@ -167,17 +167,16 @@ body {
 /* The place containing the text and all */
 #wrapper {
     /*animation: slide 50s cubic-bezier(0.8, 0, 0, 0.8) infinite ; */
-    opacity : 0.85;
-    padding-bottom : 6.55%;
+    opacity : 1;
     padding-top: 6.5%;
     width :100%;
     height: 100%;
 }
 
-/* Menu de navigation */
+/* navigation menu */
 nav {
     position : sticky;
-    Top : 0;
+    top : 0;
     margin-left: 5%;
     height: 8%;
     width: 35%;
@@ -186,116 +185,65 @@ nav {
        1px -1px 0 black,
       -1px 1px 0 hotpink,
        1px 1px 0 hotpink;
-}
-
-/* Liste du menu */
-#Navigation_Menu{
     display: inline-block;
-    margin: 2% 0% 0% 0%;
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 30px;
+    z-index: 100000;
+    text-align: left;
+}
+/* root of navigation links*/
+nav ul {
+    list-style: none;
+}
+/*elements of navigation menu*/
+nav li {
+    display: inline-block;
+    position: relative;
     text-align: center;
+    margin-right: 10px;
+}
+/*links inside navigation menu*/
+nav a {
+    padding: 5px 10px 5px 10px;
+    min-width: 70px;
+    box-sizing: border-box;
     width: 100%;
 }
-
-.Navigation {
-    display: inline;
+/*on hover of links inside navigation menu*/
+nav a:hover {
+    background-color: rgb(255, 192, 206);
 }
-
-#more:hover {
-    background-color: transparent;
-}
-
-/*Drop-down Menu*/
-.DropMenu {
-    padding: 1.5% 7% 1.5% 7%;
-    transition: background-color 0.4s;
-    display: inline-block;
-}
-
-.DropMenu:link {
-    color: deeppink;
-}
-
-.DropMenu:visited {
-    color: deeppink;
-}
-
-.DropMenu:hover {
-    color: blueviolet;
-    background-color: pink;
-}
-
-.DropMenu:checked {
-    color: deeppink;
-}
-
-#Liste {
-    overflow: hidden;
-}
-
-/* Dropdown download-btn */
-#Liste .dropbtn {
-    border: none;
-    outline: none;
-    font-size: 1em;
-    font-weight: bold;
-    text-shadow:
-       -1px -1px 0 pink,
-        1px -1px 0 black,
-       -1px 1px 0 hotpink,
-        1px 1px 0 hotpink;
-    margin: 0; /* Important for vertical align on mobile phones */
-    color: deeppink;
-    background-color: transparent;
-    transition: background-color 0.4s;
-    display: inline-block;
-}
-
-.dropbtn:hover {
-    background-color: pink;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
+/*dropdown menu*/
+nav ul ul {
     display: none;
     position: absolute;
-    margin-top: 1.9%;
-    margin-left: -24%;
-    background-color: pink;
-    width: 65%;
-    z-index: 1;
+    top: 100%;
+    left: -88px;
+    overflow: hidden;
+    padding-top: 3px;
 }
-
-
-
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    float: none;
-    color: pink;
-    padding: 1.6% 7% 1.85% 7%;
-    display: block;
-    text-align: middle;
-    text-decoration-line: none;
+/*element of dropdown menu*/
+nav ul ul li{
+    width: 260px;
 }
-
-/* Show the dropdown menu on hover */
-.DropMenu:hover .dropdown-content {
-    display: block;
-    transition: background-color 0.4s;
-}
-
-.dropdown-content a:hover {
+/*link inside element of dropdown menu*/
+nav ul ul li a {
+    box-sizing: border-box;
+    width: 100%;
     background-color: pink;
 }
-
-
+/*show dropdown menu*/
+nav ul li:hover > ul {
+    display: inline-block;
+}
+/*keep more highlighted*/
+nav ul li:last-child:hover {
+    background-color: pink;
+}
 
 /* Custom des liens */
 a {
     padding: 1.6% 3% 1.85% 3%;
-    transition: background-color 0.4s;
+    transition: background-color 0.2s;
     display: inline-block;
     text-decoration-line: none;
 }
@@ -324,6 +272,7 @@ h2 {
 #Tweet {
     background: url("../Images/Cute_Frame.png");
     background-size: cover;
+    background-position: center;
     height: 70%;
     margin-top: 8%;
     margin-left: 15%;
@@ -385,7 +334,7 @@ footer {
 }
 /*download div*/
 .download-dropmenu {
-    margin-top: -40px;
+    margin-top: 40px;
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
@@ -422,7 +371,6 @@ footer {
     margin-top: 5px;
     margin-bottom: -69px;
     padding: 0px;
-    z-index: 1;
 }
 /*links inside download dropmenu*/
 .download-dropmenu-content a {
@@ -465,11 +413,24 @@ footer {
      -0.8px 0.8px 0 white,
      0.8px 0.8px 0 white;
 }
+/*center */
+#CenterUnderTweet {
+    display: inline-block;
+    width: 100%;
+}
+/*keep size of CenterContacts*/
+#UnderTweetContents {
+    width: 100%;
+}
+/*float stuff right*/
+.side-right {
+    float: right;
+    text-align: right;
+}
 /*link to github changelog*/
 #changelog {
     float: right;
     background-color: rgba(255, 182, 193, 0.7);
-    margin-right: 20px;
     padding: 5px;
     border-radius: 3px;
 }
