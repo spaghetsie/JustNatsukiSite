@@ -53,7 +53,7 @@
                     <h1>Just <br> Natsuki</h1>
                     <h2>A Doki Doki Fan Mod!</h2>
                 </header>
-
+                
                 <div id="Features">
 
                     <h3>Features</h3>
@@ -71,7 +71,7 @@
                     </ul>
 
                 </div>
-
+                <div id="fade">
                 <div>
                     <!--Team members-->
                     <h3 id="TeamTitle">The Team :</h3>
@@ -116,11 +116,7 @@
                         </tr>
                     </table>
                 </div>
-
                 
-
-                </div>
-                </div>
                 <!--twitter timeline widget-->
                 <div style="margin-left: 4%; margin-right: 4%;">
                     <div id="Feed">
@@ -261,7 +257,37 @@
                 </footer>
 
                 </div>
-
+                </div>
+                <script>
+                    var offset_how_far_appear = -500
+                    var fading_el = document.getElementById("fade");
+        
+                    window.onload = function () {
+                        var offset = fading_el.getBoundingClientRect().top;
+                        if(offset+offset_how_far_appear<0){
+                            fading_el.classList.add("show");
+                        }
+                        else{
+                            fading_el.classList.add("hide");
+                        }
+                        
+                    }
+                    fading_el.style.transition = "opacity 1s"
+                    function fading() {
+                        var offset = fading_el.getBoundingClientRect().top;
+                        if(offset+offset_how_far_appear<0){
+                            fading_el.classList.remove("hide");
+                            fading_el.classList.add("show");
+                        }
+                        else{
+                            fading_el.classList.remove("show");
+                            fading_el.classList.add("hide");
+                        }
+                        setTimeout(() => fading(), 50);
+                    }
+                    fading();
+                </script>
+                </div>
             </div>
 
         </div>

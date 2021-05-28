@@ -167,7 +167,6 @@ body {
 /* The place containing the text and all */
 #wrapper {
     /*animation: slide 50s cubic-bezier(0.8, 0, 0, 0.8) infinite ; */
-    opacity : 1;
     padding-top: 6.5%;
     width :100%;
     height: 100%;
@@ -283,8 +282,8 @@ h2 {
 }
 /*sub-title stuff*/
 h5 {
-    padding-top: 12%;
-    padding-bottom: 5%;
+    padding-top: 9%;
+    padding-bottom: 3%;
     text-align: center;
     font-size: 1.2em;
 }
@@ -365,12 +364,17 @@ footer {
 /*contents of download dropmenu*/
 .download-dropmenu-content {
     display: none;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    width: 800px;
     text-align: center;
     min-height: 40px;
     margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5px;
-    margin-bottom: -69px;
     padding: 0px;
 }
 /*links inside download dropmenu*/
@@ -381,6 +385,15 @@ footer {
     background-color: rgba(255, 182, 193, 0.7);
     padding: 10px;
 }
+
+.unavailable {
+    background-color: rgba(190, 190, 190, 0.7) !important;
+}
+.unavailable:hover {
+    background-color: rgba(190, 190, 190, 0.7) !important;
+    cursor: default;
+}
+
 /*images inside download dropmenu*/
 .download-dropmenu-content img {
     height: 30px;
@@ -391,7 +404,7 @@ footer {
 }
 /*show dropmenu*/
 .show {
-    display: block;
+    display: inline-block;
 }
 /*stuff under blog post (sorry had no idea how to name it)*/
 #underTweet{

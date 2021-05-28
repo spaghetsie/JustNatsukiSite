@@ -166,7 +166,6 @@ body {
 /* The place containing the text and all */
 #wrapper {
     /*animation: slide 50s cubic-bezier(0.8, 0, 0, 0.8) infinite ; */
-    opacity : 0.85;
     padding-bottom : 6.55%;
     padding-top: 6.5%;
     width :100%;
@@ -270,6 +269,7 @@ h2 {
 }
 /*show off of mod features*/
 #Features {
+    opacity: 0.85;
     margin-top: 4%;
     width: 100%;
     text-align: center;
@@ -334,6 +334,7 @@ h2 {
     text-align: center;
     border-collapse: separate;
     border-spacing: 1em 2em;
+    opacity: 0.85;
 }
 
 /* Avatar related */
@@ -443,10 +444,10 @@ h2 {
     font-size: 1.1em;
     color: deeppink;
     text-shadow:
-     -0.8px -0.8px 0 pink,
-     0.8px -0.8px 0 pink,
-      -0.8px 0.8px 0 pink,
-      0.8px 0.8px 0 pink;
+     -0.55px -0.55px 0 white,
+     0.55px -0.55px 0 white,
+      -0.55px 0.55px 0 white,
+      0.55px 0.55px 0 white;
     text-align: center;
     width: 570px;
     display: inline-block;
@@ -472,6 +473,10 @@ h2 {
 #Github a{
     padding: 0px;
     height: 270px;
+}
+
+#Github a:hover {
+    background-color: rgba(255, 192, 203, 0.75);
 }
 
 #Tweet {
@@ -509,7 +514,7 @@ a:checked {
 }
 /*credits most likely*/
 footer {
-    opacity: 0.75;
+    opacity: 0.90;
     width: 95%;
     margin-top: 10%;
     padding-bottom: 15px;
@@ -521,4 +526,12 @@ footer {
       1px -1px 0 black,
       -1px 1px 0 black,
        1px 1px 0 black;
+}
+
+.show {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
 }
