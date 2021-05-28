@@ -1,0 +1,75 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.background {
+    margin-top: 200px;
+    margin-left: 200px;
+    width: 300px;
+    height: 300px;
+    background-attachment: fixed;
+    position: fixed;
+    z-index: -1;
+    overflow: hidden;
+}
+.stars {
+    background-image: url("../Images/stars.png");
+    height: inherit;
+    width: inherit;
+    position: absolute;
+}
+.space {
+    background-image: url("../Images/space.png");
+    height: 300px;
+    width: 1017px;
+    position: absolute;
+    background-repeat: repeat-x;
+    animation: move_space 50s infinite linear;
+
+}
+.space_dust {
+    background-image: url("../Images/space_dust.png");
+    height: inherit;
+    width: 1100px;
+    animation: move_dust 10s linear infinite;
+    position: absolute;
+}
+.space_dust_expand {
+    position: absolute;
+    background-color: white;
+    height: inherit;
+    width: inherit;
+    mix-blend-mode: overlay;
+    animation: expand_dust 30s infinite;
+}
+.space_dust_color {
+    position: absolute;
+    background-color: hotpink;
+    height: inherit;
+    width: inherit;
+    mix-blend-mode: overlay;
+}
+
+@keyframes move_dust {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-533px) translateY(0);
+    }
+}
+
+@keyframes expand_dust {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+    45% {opacity: 1;}
+    50% {opacity: 1;}
+    65% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes move_space {
+    0% {transform: translateX(0) translateY(0);}
+    100% {transform: translateX(-678px) translateY(0);}
+}
