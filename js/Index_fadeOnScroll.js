@@ -1,48 +1,28 @@
-var offset_how_far_appear = -500;
-var fading_el = document.getElementsByClassName("fade");
-var top = document.getElementById("FeaturesImages");
+var offset_how_far_appear = -300
+var fading_el = document.getElementById("fade");
 
-function addclass(string) {
-    [...fading_el].forEach(element => {
-        element.classList.add(string);
-    });
+
+var offset = fading_el.getBoundingClientRect().top;
+if(offset+offset_how_far_appear<0){
+    fading_el.classList.add("show");
+}
+else{
+    fading_el.classList.add("hide");
 }
 
-function removeclass(string) {
-    [...fading_el].forEach(element => {
-        element.classList.remove(string);
-    });
-}
-
-window.onload = function () {
-    var fading_el = document.getElementsByClassName("fade");
-    var top = document.getElementById("FeaturesImages");
-    var offset = top.getBoundingClientRect().top;
+function fading() {
+    var offset = fading_el.getBoundingClientRect().top;
     if(offset+offset_how_far_appear<0){
-        addclass("show");
+        fading_el.classList.remove("hide");
+        fading_el.classList.add("show");
     }
     else{
-        addclass("hide");
-    }
-    
-};
-
-[...fading_el].forEach(element => {
-        element.style.transition = "opacity 1s";
-    });
-
-
-function fading(top) {
-    var top = document.getElementById("FeaturesImages");
-    var offset = top.getBoundingClientRect().top;
-    if(offset+offset_how_far_appear<0){
-        removeclass("hide");
-        addclass("show");
-    }
-    else{
-        removeclass("show");
-        addclass("hide");
+        fading_el.classList.remove("show");
+        fading_el.classList.add("hide");
     }
     setTimeout(() => fading(), 50);
 }
+setTimeout(function (){
+    fading_el.style.transition = "opacity 0.8s"
 fading();
+}, 700)

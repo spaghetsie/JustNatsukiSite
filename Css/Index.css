@@ -518,7 +518,7 @@ footer {
     opacity: 0.90;
     width: 95%;
     margin-top: 10%;
-    padding-bottom: 15px;
+    margin-bottom: -60px;
     text-align: right;
     font-weight: bold;
     font-size: 1.5em;
@@ -530,9 +530,9 @@ footer {
 }
 
 .show {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .hide {
-    opacity: 0;
+    opacity: 0 !important;
 }
