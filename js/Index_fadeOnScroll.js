@@ -1,4 +1,4 @@
-var offset_how_far_appear = -300
+var offset_how_far_appear = -400
 var fading_el = document.getElementById("fade");
 
 
