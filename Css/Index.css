@@ -354,8 +354,8 @@ h2 {
     text-align: right;
     width: 30%;
 }
-/*properties for each member individually*/
-#DescDaisy {
+
+.team-description {
     width: 50%;
     height: 70%;
     font-size: 2em;
@@ -367,77 +367,6 @@ h2 {
     background-color: rgba(255,255,255,0.85);
 }
 
-#DescJMO {
-    width: 50%;
-    height: 70%;
-    font-size: 2em;
-    font-weight: bold;
-    border: 1px 1px 1px 1px;
-    padding: 1% 1% 1% 1%;
-    border-style: double;
-    border-color: black;
-    background-color: rgba(255,255,255,0.85);
-}
-
-#DescJNN {
-    width: 50%;
-    height: 70%;
-    font-size: 2em;
-    font-weight: bold;
-    border: 1px 1px 1px 1px;
-    padding: 2% 1% 2% 1%;
-    border-style: double;
-    border-color: black;
-    background-color: rgba(255,255,255,0.85);
-}
-
-#DescJp {
-    width: 50%;
-    height: 70%;
-    font-size: 2em;
-    font-weight: bold;
-    border: 1px 1px 1px 1px;
-    padding: 2% 1% 2% 1%;
-    border-style: double;
-    border-color: black;
-    background-color: rgba(255,255,255,0.85);
-}
-
-#DescDuffle {
-    width: 50%;
-    height: 70%;
-    font-size: 2em;
-    font-weight: bold;
-    border: 1px 1px 1px 1px;
-    padding: 2% 1% 2% 1%;
-    border-style: double;
-    border-color: black;
-    background-color: rgba(255,255,255,0.85);
-}
-
-#DescYosha {
-    width: 50%;
-    height: 70%;
-    font-size: 2em;
-    font-weight: bold;
-    border: 1px 1px 1px 1px;
-    padding: 2% 1% 2% 1%;
-    border-style: double;
-    border-color: black;
-    background-color: rgba(255,255,255,0.85);
-}
-
-#DescSpagh {
-    width: 50%;
-    height: 70%;
-    font-size: 2em;
-    font-weight: bold;
-    border: 1px 1px 1px 1px;
-    padding: 2% 1% 2% 1%;
-    border-style: double;
-    border-color: black;
-    background-color: rgba(255,255,255,0.85);
-}
 /*twitter timeline widget*/
 #Feed {
     font-size: 1.1em;
